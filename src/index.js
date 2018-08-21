@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./styles.css";
-import { getTodosInformation, todoCompleted, todoId, todoName } from "./map";
+import { getTodosInformation } from "./map";
 
 function App() {
   const arrayUm = [
@@ -10,9 +10,9 @@ function App() {
     { id: 3, name: "Pegar onibus", completed: false },
     { id: 4, name: "Estudar e dormir", completed: true }
   ];
-  const todosCompletados = getTodosInformation(arrayUm, todoCompleted);
-  const todosNomes = getTodosInformation(arrayUm, todoName);
-  const todosIds = getTodosInformation(arrayUm, todoId);
+  const todosCompletados = getTodosInformation(arrayUm, "completed");
+  const todosNomes = getTodosInformation(arrayUm, "name");
+  const todosIds = getTodosInformation(arrayUm, "id");
   return (
     <div className="App">
       <h1>Map</h1>
